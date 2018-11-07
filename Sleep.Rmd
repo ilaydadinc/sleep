@@ -10,3 +10,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Sleep data
+```{r}
+library(tidyverse)
+
+sleep<- read.csv("sleep.csv")
+
+graph_sleep <- ggplot(sleep,aes(x=gestation, y=body))+
+  geom_point()
+
+graph_sleep
+```
+
